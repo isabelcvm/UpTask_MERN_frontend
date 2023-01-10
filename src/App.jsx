@@ -32,9 +32,8 @@ function App() {
           </Route>
           <Route path='/proyectos' element={ <RutasProtegidas/> }>
             <Route index element={<Proyectos/> } />
-            <Route path='crear-proyecto' element={ <NuevoProyecto/> } />
-            {/* Todas las rutas que tengas el routing dinamico deben ir hacia el final */}
             <Route path='nuevo-colaborador/:id' element={ <NuevoColaborador/>} />
+            <Route path='crear-proyecto' element={ <NuevoProyecto/> } />
             <Route path=':id' element={ <Proyecto /> } />
             <Route path='editar/:id' element={ <EditarProyecto /> } />
           </Route>
@@ -44,5 +43,6 @@ function App() {
     </BrowserRouter>
   )
 }
+/* Todas las rutas que tengas el routing dinamico deben ir hacia el final */
 
 export default App

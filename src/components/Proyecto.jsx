@@ -28,7 +28,7 @@ const Proyecto = () => {
     }, [])
 
     useEffect( ()=>{
-        socket = io(import.meta.env.VITE_BACKEND_URL)
+        socket = io('https://uptask-mern-back.onrender.com/')
         socket.emit('abrir proyecto', params.id)
     }, [])
 

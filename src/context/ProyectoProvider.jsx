@@ -50,7 +50,7 @@ const ProyectosProvider = ({ children }) => {
   }, [auth])
 
   useEffect(() => {
-    socket = io(import.meta.env.VITE_BACKEND_URL)
+    socket = io('https://uptask-mern-back.onrender.com/')
   }, [])
 
   const mostrarAlerta = alerta => {

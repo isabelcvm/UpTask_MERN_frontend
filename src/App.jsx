@@ -19,7 +19,7 @@ import NuevoColaborador from './pages/NuevoColaborador'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/UpTask_MERN_frontend/'>
       <AuthProvider>
         <ProyectosProvider>
         <Routes>

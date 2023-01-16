@@ -3,6 +3,7 @@ import FormularioColaborador from '../components/FormularioColaborador'
 import { useParams, Link } from 'react-router-dom'
 import useProyectos from '../hooks/useProyectos';
 import Alerta from '../components/Alerta';
+import Loading from '../components/Loading';
 
 const NuevoColaborador = () => {
 
@@ -21,7 +22,7 @@ const NuevoColaborador = () => {
             <FormularioColaborador />
         </div>
 
-      { cargando ? <p className='text-center'> cargando... </p> : colaborador?._id && (
+      { cargando ? <p className='text-center'> <Loading /> </p> : colaborador?._id && (
         <div className='flex justify-center mt-5'>
           <div className='bg-white py-10 px-5 w-full md:w-1/2 rounded-lg shadow'>
             <h2 className='text-center mb-5 text-2xl font-bold '>Resultado:</h2>

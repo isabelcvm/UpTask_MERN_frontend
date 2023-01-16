@@ -1,12 +1,13 @@
 import { Navigate, Outlet } from 'react-router-dom'
 import Header from '../components/Header';
+import Loading from '../components/Loading';
 import Sidebar from '../components/Sidebar';
 import useAuth from '../hooks/useAuth'
 
 const RutasProtegidas = () => {
 
     const { auth, cargando } = useAuth();
-    if(cargando) return 'Cargando...'
+    if(cargando) return <Loading />
     return (
         <>
             { auth._id ? (

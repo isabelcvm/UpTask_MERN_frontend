@@ -1,15 +1,15 @@
 {
-  "name": "UpTask_MERN_frontend",
+  "name": "frontend",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://isabelcvm.github.io/UpTask_MERN_frontend/",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "vite build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "build": "CI=false rescripts build",
+    "build-win": "set CI=false&&rescripts build"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.4",
